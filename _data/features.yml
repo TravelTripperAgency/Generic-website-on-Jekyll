@@ -1,0 +1,22 @@
+title: Featured & Specials
+
+gallery: 
+  - title: Mark The Occasion
+    image: '../images/promo-slider-img1.jpg'
+    description: Enjoy a 20% Advanced Purchase Savings to commemorate the arrival of Old Town Key West’s first, newly built, luxury resort in 20 years!
+    more_url: '/specials/'
+
+  - title: Resort Offer
+    image: '../images/promo-slider-img2.jpg'
+    description: Discover The Marker and experience the best of Key West and a $50 daily drink and dine credit for every night you stay!
+    more_url: '/specials/'
+
+  - title: TEQUILA SUNRISE
+    image: '../images/promo-slider-img3.jpg'
+    description: Wake up to a delicious Key West breakfast and a handmade morning cocktail
+    more_url: '/specials/'
+
+  - title: CHECK OUT OUR NEW BLOG
+    image: '../images/promo-slider-img4.png'
+    description: Visit our new blog - The Spot - for all of the latest and greatest Key West events, activities, and news!
+    more_url: '/blog/'  

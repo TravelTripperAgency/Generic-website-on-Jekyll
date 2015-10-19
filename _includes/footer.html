@@ -1,0 +1,59 @@
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 ">
+        <nav id="footer-menu" class="footer-menu"> 
+		  <ul>
+		 {% for link in site.data.footer %} 
+              {% if link.url contains 'http' %}
+                {% assign domain = '' %}
+              {% elsif link.url == '#' %}
+                {% assign domain = '' %}
+              {% else %}
+                {% assign domain = site.url %}
+              {% endif %} 
+            {% if link.side == 'footernav' %} 
+              <li{% if link.url == page.url %} class="active"{% endif %}><a href="{{ domain }}{{ site.baseurl }}{{ link.url }}"{% if link.url contains 'http' %} target="_blank"{% endif %}>{{ link.title | escape }}</a></li>
+            {% endif %} 
+        {% endfor %} 
+          
+        
+        </ul>  
+        </nav>
+      </div>
+      <div class="col-md-4  ">
+        <article id="newsletter">
+          <h4><a href="/signup#newsletter-form" class="email-signup">Email Offers Sign-Up</span></a></h4> 
+        </article>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4  col-sm-6 col-xs-12  sociallinks">
+	   <ul class="socials social-links">
+			{% for link in site.data.footer %} 
+				{% if link.url contains 'http' %}
+					{% assign domain = '' %}
+				  {% elsif link.url == '#' %}
+					{% assign domain = '' %}
+				  {% else %}
+					{% assign domain = site.url %}
+				  {% endif %} 
+				{% if link.side == 'socaillinks' %} 
+				  <li{% if link.url == page.url %} class="active"{% endif %}><a href="{{ domain }}{{ site.baseurl }}{{ link.url }}"{% if link.url contains 'http' %} target="_blank"{% endif %}><span class="icon {{ link.class}}"></span></a></li>
+				  {% endif %} 
+			{% endfor %}  
+            </ul> 
+      </div>
+      <div  class="col-md-8 col-sm-6 col-xs-12  "> <small class="copyright"> {{site.address}}, Phone:  {{site.phone}}<br>
+        All Rights Reserved &copy; {{ site.time | date: '%Y' }} </small> </div>
+    </div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.stylish-select.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
+<script src="js/owl.carousel.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="js/holder.min.js"></script>
+<script src="js/script.js"></script>

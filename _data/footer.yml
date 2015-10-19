@@ -1,0 +1,53 @@
+- title: Careers
+  url: "/careers/"
+  side: footernav 
+
+- title: News/Press
+  url: "/news/"
+  side: footernav 
+
+- title: "Hotel Policy"
+  url: "/hotel-policy/"
+  side: footernav
+
+- title: "Privacy Policy"
+  url: "/privacy/"
+  side: footernav
+
+- title: "Site Security"
+  url: "/site-security/"
+  side: footernav
+
+- title: "Site Map"
+  url: "/sitemap/"
+  side: footernav
+  
+- title: "Facebook"
+  url: "https://www.facebook.com/TheMarkerResort"
+  class: facebook
+  side: socaillinks
+
+- title: "Twitter"
+  url: "https://twitter.com/TheMarkerResort"
+  class: twitter
+  side: socaillinks
+
+- title: "Instagram"
+  url: "https://instagram.com/themarkerresort/"
+  class: instagram
+  side: socaillinks
+  
+- title: "Tripadvisor"
+  url: "http://www.tripadvisor.in/Hotel_Review-g34345-d6853077-Reviews-The_Marker_Waterfront_Resort_Key_West-Key_West_Florida_Keys_Florida.html"
+  class: tripadvisor
+  side: socaillinks
+
+- title: "google+"
+  url: "https://plus.google.com/u/0/111033740280620125237/posts"
+  class: google
+  side: socaillinks
+ 
+- title: "blog"
+  url: "/blog"
+  class: blog
+  side: socaillinks

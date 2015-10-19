@@ -1,0 +1,115 @@
+<!-- header -->
+ <header class="navbar navbar-default navbar-fixed-top  header"> 
+  <div class="container header-container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <p class="phone-number-sm"> <a href="tel://{{site.phone}}">{{site.phone}}</a> </p>
+      <a href="{{site.booknow_url}}" class="booknow-sm">BOOK NOW</a> <a class="navbar-brand" href="/home"><span class="logo"><img src="{{site.logo}}" title="{{site.title}}" ></span></a> </div>
+    <div	 id="navbar"  class="navbar-collapse collapse">
+      <div class="nav navbar-nav">
+        <ul class="main-menu">
+		{% for link in site.data.navigation %} 
+           {% if link.url contains 'http' %}
+                {% assign domain = '' %}
+              {% elsif link.url == '#' %}
+                {% assign domain = '' %}
+              {% else %}
+                {% assign domain = site.url %}
+              {% endif %} 
+           
+          {% if link.navtype == 'main' %} 
+            {% if link.dropdown == nil %} 
+              <li {% if link.url == page.url %} class="active"{% endif %}><a href="{{ domain }}{{ site.baseurl }}{{ link.url }}"{% if link.url contains 'http' %} target="_blank"{% endif %}>{{ link.title | escape }}</a></li>
+			{% else %}
+			<li class="dropdown{% if link.url == page.url %} active{% endif %}">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >{{ link.title | escape }}</a>
+
+                  <ul class="dropdown-menu">
+                    {% for dropdown_link in link.dropdown %} 
+                      {% if dropdown_link.url contains 'http' %}
+                        {% assign domain = '' %}
+                        {% else %}
+                        {% assign domain = site.url %}
+                      {% endif %}
+                      <li><a href="{{ domain }}{{ site.baseurl }}{{ dropdown_link.url }}"{% if dropdown_link.url contains 'http' %} target="_blank"{% endif %}>{{ dropdown_link.title | escape }}</a></li>
+                    {% endfor %}
+                  </ul> 
+              </li>
+            {% endif %}
+          {% endif %}
+        {% endfor %} 
+        </ul>
+        <ul class="ancilary-nav">
+		 {% for link in site.data.navigation %} 
+              {% if link.url contains 'http' %}
+                {% assign domain = '' %}
+              {% elsif link.url == '#' %}
+                {% assign domain = '' %}
+              {% else %}
+                {% assign domain = site.url %}
+              {% endif %} 
+            {% if link.side == 'ancilary' %} 
+              <li{% if link.url == page.url %} class="active"{% endif %}><a href="{{ domain }}{{ site.baseurl }}{{ link.url }}"{% if link.url contains 'http' %} target="_blank"{% endif %}>{{ link.title | escape }}</a></li>
+            {% endif %} 
+        {% endfor %} 
+          <li>
+            <ul class="social-links">
+			{% for link in site.data.navigation %} 
+				{% if link.url contains 'http' %}
+					{% assign domain = '' %}
+				  {% elsif link.url == '#' %}
+					{% assign domain = '' %}
+				  {% else %}
+					{% assign domain = site.url %}
+				  {% endif %} 
+				{% if link.side == 'socaillinks' %} 
+				  <li{% if link.url == page.url %} class="active"{% endif %}><a href="{{ domain }}{{ site.baseurl }}{{ link.url }}"{% if link.url contains 'http' %} target="_blank"{% endif %}><span class="icon {{ link.class}}"></span></a></li>
+				  {% endif %} 
+			{% endfor %}  
+            </ul>
+          </li>
+          <li>
+            <p class="phone-number">{{site.phone}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>  
+  
+   
+  <section id="booking" class="booking collapsed">
+   
+    <form action="{{site.booknow_url}}search?" id="roombook" target="_blank">
+      <fieldset>
+        <div class="dates">
+          <label for="checkin" class="date">Check-in:</label>
+          <input type="text" class="text calendar" id="arrival_date"  placeholder="MM-DD-YYYY" name="arrival_date" >
+        </div>
+        <div class="dates">
+          <label for="checkout" class="date">Check-out:</label>
+          <input type="text" class="text calendar" id="departure_date"  placeholder="MM-DD-YYYY"  name="departure_date">
+        </div>
+        <p>
+          <label for="rooms">Rooms:</label>
+          <select id="rooms" name="rooms" class="selectbox">
+            <option value="1" selected>01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+          </select>
+        </p>
+        <p>
+          <label for="adults">People:</label>
+          <select id="adults" name="adults[]" class="selectbox">
+            <option value="1">01</option>
+            <option value="2" selected>02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+          </select>
+        </p>
+        <p class="buttons"> <a href="javascript:;"  onclick="document.getElementById('roombook').submit();" class="link_to_reztrip_with_search_params" target="_blank"><span>Check Availability &amp;&nbsp;</span>Book Now</a> <span class="rates">Best Rate Guaranteed</span>   </p>
+      </fieldset>
+    </form>
+  </section> 
+  </div>
+</header>
+<!-- ./header --> 

@@ -1,0 +1,143 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+body {
+	padding-top:65px;
+}
+// Our variables`
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   15px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #464646;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #898989;
+$grey-color-light: lighten($grey-color, 38%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+
+$primary-color:		#fff;
+$secondary-color:	#000;
+
+$highlight-color : 	#0bb7e4;
+$active-color: 		#2c7a8c;
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+ 
+ul {
+	padding:0px;
+	margin:0px;
+}
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+ 
+@media screen and  (min-width: 1200px){ 
+	.container {
+		width: 1170px;
+	}
+}
+.social-links{
+	li{
+		float:left;
+		list-style:none;
+		a{
+			.icon{
+				font-family: 'socicon';
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				font-size:1.2em;
+				width:25px;
+				height:25px;
+				display:block;
+	 
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				&.facebook{
+					&:before {
+						content: "\62";
+					}
+				}
+				&.twitter{
+				font-size:1.3em;
+					&:before {
+						content: "\61";
+					}
+				}
+				&.instagram{
+					&:before {
+						content: "\78";
+					}
+				}
+				&.tripadvisor{
+				font-size:1.5em;
+					&:before {
+						content: "\33";
+					}
+				}
+				&.mail{
+				font-size:1.5em;
+					&:before {
+						content: "\40";
+					}
+				}
+				&.google{
+					&:before {
+						content: "\63";
+					}
+				}
+				&.blog{
+					&:before {
+						content: "\2c";
+					}
+				}
+			}
+		}
+	}
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        //"base",
+        //"layout",
+        //"syntax-highlighting"
+		"bootstrap",
+		"fonts",
+		"header-footer",
+		"owl.carousel",
+		"home"
+;
+a{	
+	position: relative;
+	-webkit-transition: color 200ms;
+	transition: color 200ms;
+	color:$highlight-color;
+	text-decoration:none;
+	&:hover, &:focus{
+		color:$active-color;
+		text-decoration:none;
+	}
+}

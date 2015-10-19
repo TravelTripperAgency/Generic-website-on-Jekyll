@@ -1,0 +1,136 @@
+- title: Our Hotel 
+  navtype: main
+  dropdown:
+  - title: "About The Marker"
+    url: "/about-the-marker/"
+  - title: "Resort Map Download"
+    url: "/"
+  - title: "Local Design"
+    url: "/local-design/"
+  - title: "Press Room"
+    url: "/news"
+  - title: "FAQ" 
+    url: "/faq/"
+
+- title: "Accommodations" 
+  navtype: main
+  dropdown:
+  - title: "View All Rooms"
+    url: "/accommodations/"
+  - title: "The Marker Classic Rooms"
+    url: "/the-marker-classic-rooms/"
+  - title: "Pool Garden Rooms"
+    url: "/pool-garden-rooms"
+  - title: "Key West Harbor Rooms"
+    url: "/key-west-harbor-rooms/"
+  - title: "The Captain's Quarters"
+    url: "/the-captains-quarters/"
+
+- title: "Services & Amenities" 
+  navtype: main
+  dropdown:
+  - title: "View All"
+    url: "/view-all/"
+  - title: "Pools"
+    url: "/pools/"
+  - title: "Fitness Center"
+    url: "/fitness-center/"
+  - title: "Parking"
+    url: "/parking/"
+
+- title: "Experience" 
+  navtype: main
+  dropdown:
+  - title: "The Marker Experience"
+    url: "/the-marker-experience/"
+  - title: "Activities"
+    url: "/activities/"
+  - title: "Family"
+    url: "/family/"
+  - title: "Romance"
+    url: "/romance/"
+  - title: "Key West Art Heritage"
+    url: "/key-west-art-heritage/"
+
+- title: "Gallery" 
+  navtype: main
+  dropdown:
+  - title: "View All Images"
+    url: "/view-all-images/"
+  - title: "Key West Webcam"
+    url: "/key-west-webcam/"
+
+- title: "Weddings & Events" 
+  navtype: main
+  dropdown:
+  - title: "Weddings"
+    url: "/weddings/"
+  - title: "Meetings & Events"
+    url: "/meetings/"
+
+- title: "Drinks & Dining"
+  navtype: main
+  dropdown:
+  - title: "View All"
+    url: "/viewall/"
+  - title: "Cero Bodega"
+    url: "/cero-bodega/"
+  - title: "Bar"
+    url: "/bar/"
+
+- title: "Key West"
+  navtype: main
+  dropdown:
+  - title: "Local Attractions"
+    url: "/local-attractions/"
+  - title: "Calendar of Events"
+    url: "/calendar/" 
+
+- title: Specials
+  url: "/specials/"
+  side: ancilary 
+
+- title: Reservations
+  url: "/reservations/"
+  side: ancilary 
+
+- title: "The Spot"
+  url: "/blog/"
+  side: ancilary
+
+- title: "Connect"
+  url: "/signup/"
+  side: ancilary
+
+- title: "Location"
+  url: "/location/"
+  side: ancilary
+
+- title: "Contact"
+  url: "/contact/"
+  side: ancilary
+  
+- title: "Facebook"
+  url: "https://www.facebook.com/TheMarkerResort"
+  class: facebook
+  side: socaillinks
+
+- title: "Twitter"
+  url: "https://twitter.com/TheMarkerResort"
+  class: twitter
+  side: socaillinks
+
+- title: "Instagram"
+  url: "https://instagram.com/themarkerresort/"
+  class: instagram
+  side: socaillinks
+  
+- title: "Tripadvisor"
+  url: "http://www.tripadvisor.in/Hotel_Review-g34345-d6853077-Reviews-The_Marker_Waterfront_Resort_Key_West-Key_West_Florida_Keys_Florida.html"
+  class: tripadvisor
+  side: socaillinks
+
+- title: "mail"
+  url: "/signup/"
+  class: mail
+  side: socaillinks

@@ -1,0 +1,22 @@
+<!-- Promo section -->
+<article id="promos" class="promos">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h3>{{site.data.features.title}}</h3>
+      </div> 
+    </div>
+    <div id="owl-promo" class="owl-carousel owl-theme">
+	{% for feature in site.data.features.gallery %}  
+        <div class="item">
+        <article> <a href="{{feature.more-url}}" class="thumbnail"> <img title="{{feature.title}}"  src="{{site.baseurl}}{{feature.image}}"></a>
+          <h4><a href="{{feature.more_url}}">{{feature.title  | escape }}</a></h4>
+          <p>{{feature.description  | escape }} </p>
+          <a href="{{feature.more_url}}" class="button">Read More</a> </article>{{feature.img_url}}
+      </div>
+    {% endfor %} 
+	 
+    </div>
+  </div>
+</article>
+<!-- /.Promo section --> 

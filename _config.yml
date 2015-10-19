@@ -1,0 +1,22 @@
+# Site settings
+title: The Marker Waterfront Resort
+
+email: info@markerkeywest.com
+
+phone: (844) 229-8312
+
+address: "200 William Street, Key West, Florida 33040"
+
+booknow_url: https://themarkerkeywest.reztrip.com/
+
+logo: "../images/logo.png"
+
+description: > # this means to ignore newlines until "baseurl:"
+  The Marker Resort Key West is the newest addition to Florida Keys resorts, offering 96 spacious accommodations on the Historic Seaport of Key West.
+baseurl: "" # the subpath of your site, e.g. /blog/ 
+
+favicon: "favicon.png"
+
+ 
+# Build settings
+markdown: kramdown
